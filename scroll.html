@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroll</title>
+</head>
+<body>
+    <div id="app">
+        <scroll href="#testimonials">Go to testimonials</scroll>
+        <div style="height: 2000px"></div>
+        <div id="testimonials">
+            <h2>Testimonials</h2>
+            <div>
+                <div style="width: 30%; height: 200px; background-color: grey; float: left;">
+                    <scroll href="#app">Go up</scroll>
+                </div>
+                <div style="width: 30%; height: 200px; background-color: grey; margin: 0 5%; float: left;"></div>
+                <div style="width: 30%; height: 200px; background-color: grey; float: left;"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        Vue.component('scroll', import('./components/Scroll').default);
+
+        new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+</html>
